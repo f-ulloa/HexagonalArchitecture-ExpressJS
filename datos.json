@@ -1,0 +1,71 @@
+[
+  //Companies
+  [
+    {
+      "company_id": 1,
+      "company_name": "Felipito company",
+      "company_api_key": "3ffa98ca-a2eb-4b17-aadb-dc07a47bdf9c"
+    },
+    {
+      "company_id": 2,
+      "company_name": "Alberto company",
+      "company_api_key": "b472c59a-07b7-435d-a8cb-d6f577a0360a"
+    }
+  ],
+  //Location
+  [
+    {
+      "location_id": 1,
+      "company_id": 1,
+      "location_name": "Casa",
+      "location_country": "Chile",
+      "location_city": "Santiago",
+      "location_meta": "Meta"
+    },
+    {
+      "location_id": 2,
+      "company_id": 2,
+      "location_name": "Casa",
+      "location_country": "Chile",
+      "location_city": "Santiago",
+      "location_meta": "Meta"
+    }
+  ],
+  //Sensor
+  [
+    {
+      "location_id": 1,
+      "sensor_id": 1,
+      "sensor_name": "PrimerSensor",
+      "sensor_category": "temperatura",
+      "sensor_meta": "su meta",
+      "sensor_api_key": "f3109652-d0c9-4e92-9cf0-972d86f1cc00"
+    },
+    {
+      "location_id": 2,
+      "sensor_id": 2,
+      "sensor_name": "SengundoSensor",
+      "sensor_category": "temperatura",
+      "sensor_meta": "su meta",
+      "sensor_api_key": "9051466b-20d2-4414-b1e3-5e75b5420a76"
+    }
+  ],
+  //SensorData
+  [
+    {
+      "sensor_api_key": "9051466b-20d2-4414-b1e3-5e75b5420a76",
+      "data": "\"[{temperatura: 27}, {temperatura:28}]\"",
+      "timestamp": 1686520600468
+    },
+    {
+      "sensor_api_key": "f3109652-d0c9-4e92-9cf0-972d86f1cc00",
+      "data": "\"[{temperatura: 30}, {temperatura:28}]\"",
+      "timestamp": 1686520623703
+    },
+    {
+      "sensor_api_key": "f3109652-d0c9-4e92-9cf0-972d86f1cc00",
+      "data": "\"[{temperatura: 30}, {temperatura:28}]\"",
+      "timestamp": 1686520673134
+    }
+  ]
+]
