@@ -58,6 +58,16 @@ export default class LocationRepositoryImpl extends LocationRepository {
     );
   }
 
+  async findById(locationId) {
+    const query = `SELECT * FROM locations where location_id = ? `;
+
+    try {
+      return await db.all(query, [locationId]);
+    } catch (error) {
+      throw new Error("Could not get location: " + error.message);
+    }
+  }
+
   async update(
     locationId,
     companyId,

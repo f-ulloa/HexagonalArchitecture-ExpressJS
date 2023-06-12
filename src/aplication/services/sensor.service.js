@@ -30,6 +30,15 @@ export default class SensorService {
     }
   }
 
+  async getSensor(sensorId) {
+    try {
+      return await this.sensorRepository.findById(sensorId);
+    } catch (error) {
+      //TODO: custom logger for these errors
+      throw new Error("Error retrieving sensor: " + error.message);
+    }
+  }
+
   async updateSensor(
     sensorId,
     locationId,

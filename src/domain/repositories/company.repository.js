@@ -7,6 +7,10 @@ export class CompanyRepository {
     throw new Error("This method must be overwritten");
   }
 
+  async findById() {
+    throw new Error("This method must be overwritten");
+  }
+
   async update(company) {
     throw new Error("This method must be overwritten");
   }

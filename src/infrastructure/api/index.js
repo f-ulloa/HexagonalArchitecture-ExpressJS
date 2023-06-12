@@ -18,11 +18,11 @@ const swaggerOptions = {
       description: "Una API creada usando Node.js, Express y sqlite",
     },
   },
-  apis: ["src/infrastructure/api/routes/*.js"],
+  apis: ["src/infrastructure/api/routes/docs/*.js"],
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
-app.use("/", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use(bodyParser.json());
 app.use(cors());

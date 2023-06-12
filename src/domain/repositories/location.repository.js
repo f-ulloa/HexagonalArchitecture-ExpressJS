@@ -13,6 +13,10 @@ export class LocationRepository {
     throw new Error("This method must be overwritten");
   }
 
+  async findById(locationId) {
+    throw new Error("This method must be overwritten");
+  }
+
   async update(
     id,
     companyId,

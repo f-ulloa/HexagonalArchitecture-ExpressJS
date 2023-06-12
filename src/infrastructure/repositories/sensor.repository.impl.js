@@ -59,6 +59,16 @@ export default class SensorRepositoryImpl extends SensorRepository {
     );
   }
 
+  async findById(sensorId) {
+    const query = `SELECT * FROM sensors where sensor_id = ? `;
+
+    try {
+      return await db.all(query, [sensorId]);
+    } catch (error) {
+      throw new Error("Could not get sensor: " + error.message);
+    }
+  }
+
   async update(sensorId, locationId, sensorName, sensorCategory, sensorMeta) {
     const query = `UPDATE sensors SET location_id = ?, sensor_name = ?, sensor_category = ?, sensor_meta = ? WHERE sensor_id = ?`;
 

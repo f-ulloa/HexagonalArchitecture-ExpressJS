@@ -24,6 +24,15 @@ export default class CompanyService {
     }
   }
 
+  async getCompany(companyId) {
+    try {
+      return this.companyRepository.findById(companyId);
+    } catch (error) {
+      //TODO: custom logger for these errors
+      throw new Error("Error retrieving company: " + error.message);
+    }
+  }
+
   async updateCompany(company) {
     try {
       return this.companyRepository.update(company);

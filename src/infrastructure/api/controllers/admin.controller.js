@@ -33,6 +33,23 @@ class AdminController {
     }
   }
 
+  async getCompany(req, res) {
+    const { companyId } = req.query;
+
+    try {
+      validateRequiredParams(req.query, ["companyId"]);
+    } catch (error) {
+      return res.status(400).json({ error: error.message });
+    }
+
+    try {
+      const company = await CompanyService.getCompany(companyId);
+      return res.status(201).json(company);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  }
+
   async updateCompany(req, res) {
     const { companyId, companyName, companyApiKey } = req.body;
 
@@ -111,6 +128,23 @@ class AdminController {
     try {
       const locations = await LocationService.getLocations();
       res.json(locations);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  }
+
+  async getLocation(req, res) {
+    const { locationId } = req.query;
+
+    try {
+      validateRequiredParams(req.query, ["locationId"]);
+    } catch (error) {
+      return res.status(400).json({ error: error.message });
+    }
+
+    try {
+      const location = await LocationService.getLocation(locationId);
+      return res.status(201).json(location);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -206,6 +240,23 @@ class AdminController {
     try {
       const sensors = await SensorService.getSensors();
       res.json(sensors);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  }
+
+  async getSensor(req, res) {
+    const { sensorId } = req.query;
+
+    try {
+      validateRequiredParams(req.query, ["sensorId"]);
+    } catch (error) {
+      return res.status(400).json({ error: error.message });
+    }
+
+    try {
+      const sensor = await SensorService.getSensor(sensorId);
+      return res.status(201).json(sensor);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }

@@ -33,6 +33,15 @@ export default class LocationService {
     }
   }
 
+  async getLocation(locationId) {
+    try {
+      return await this.locationRepository.findById(locationId);
+    } catch (error) {
+      //TODO: custom logger for these errors
+      throw new Error("Error retrieving location: " + error.message);
+    }
+  }
+
   async updateLocation(
     id,
     companyId,

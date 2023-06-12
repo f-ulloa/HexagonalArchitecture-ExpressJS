@@ -25,6 +25,16 @@ export default class CompanyRepositoryImpl extends CompanyRepository {
     }
   }
 
+  async findById(companyId) {
+    try {
+      return await db.all(`SELECT * FROM companies where company_id = ?`, [
+        companyId,
+      ]);
+    } catch (error) {
+      throw new Error("Could not get company: " + error.message);
+    }
+  }
+
   async update(company) {
     try {
       const query = `UPDATE companies SET company_name = ?, company_api_key = ? WHERE company_id = ?`;

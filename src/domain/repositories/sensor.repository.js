@@ -13,6 +13,10 @@ export class SensorRepository {
     throw new Error("This method must be overwritten");
   }
 
+  async findById(sensorId) {
+    throw new Error("This method must be overwritten");
+  }
+
   async update(sensorId, locationId, sensorName, sensorCategory, sensorMeta) {
     throw new Error("This method must be overwritten");
   }
