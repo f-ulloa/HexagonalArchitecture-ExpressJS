@@ -14,11 +14,14 @@ router.post("/company", auth, AdminController.createCompany);
 router.get("/company", auth, AdminController.getCompany);
 router.get("/companies", auth, AdminController.getCompanies);
 router.put("/company", auth, AdminController.updateCompany);
+router.delete("/company", auth, AdminController.deleteCompany);
+
 router.post("/location", auth, AdminController.createLocation);
 router.get("/locations", auth, AdminController.getLocations);
 router.get("/location", auth, AdminController.getLocation);
 router.put("/location", auth, AdminController.updateLocation);
 router.delete("/location", auth, AdminController.deleteLocation);
+
 router.post("/sensor", auth, AdminController.createSensor);
 router.get("/sensors", auth, AdminController.getSensors);
 router.get("/sensor", auth, AdminController.getSensor);
