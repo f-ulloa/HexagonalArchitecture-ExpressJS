@@ -17,6 +17,8 @@
     "jsonwebtoken": "^9.0.0",
     "sqlite": "^4.2.1",
     "sqlite3": "^5.1.6",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.3",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
