@@ -105,7 +105,7 @@
  * @swagger
  * /company:
  *   put:
- *     tags[Admin /api/v1/admin]
+ *     tags: [Admin /api/v1/admin]
  *     summary: Update an existing company
  *     consumes:
  *       - application/json
@@ -126,6 +126,36 @@
  *             companyApiKey:
  *               type: string
  *               description: API key associated with the company
+ *     responses:
+ *       200:
+ *         description: Company successfully updated
+ *       400:
+ *         description: Missing parameters
+ *       500:
+ *         description: Server error
+ */
+
+/**
+ * @swagger
+ * /company:
+ *   put:
+ *     security:
+ *       - bearerAuth: []
+ *     summary: Update a company
+ *     tags: [Admin /api/v1/admin]
+ *     parameters:
+ *       - in: body
+ *         name: company
+ *         required: true
+ *         schema:
+ *           type: object
+ *           properties:
+ *             companyId:
+ *               type: string
+ *             companyName:
+ *               type: string
+ *             companyApiKey:
+ *               type: string
  *     responses:
  *       200:
  *         description: Company successfully updated
