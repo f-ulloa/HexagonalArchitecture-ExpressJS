@@ -1,8 +1,8 @@
 /**
  * @swagger
  * tags:
- *   - name: Authentication
- *     description: User authentication endpoints
+ *   - name: Admin /api/v1/admin
+ *     description: Admin endpoints
  */
 
 /**
@@ -10,7 +10,7 @@
  * /login:
  *   post:
  *     summary: Log in a user
- *     tags: [Authentication]
+ *     tags: [Admin /api/v1/admin]
  *     requestBody:
  *       required: true
  *       content:
@@ -40,43 +40,12 @@
 
 /**
  * @swagger
- * /secret:
- *   get:
- *     security:
- *       - bearerAuth: []
- *     summary: Access a secret resource
- *     tags: [Authentication]
- *     responses:
- *       200:
- *         description: Access allowed
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 message:
- *                   type: string
- *       401:
- *         description: Admin not found | Error in Admin search | Error in Admin login Invalid password
- *       500:
- *         description: Server error
- */
-
-/**
- * @swagger
- * tags:
- *   - name: Admin
- *     description: Admin endpoints
- */
-
-/**
- * @swagger
  * /company:
  *   post:
  *     security:
  *       - bearerAuth: []
  *     summary: Create a new company
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     parameters:
  *       - in: body
  *         name: companyName
@@ -101,7 +70,7 @@
  *     security:
  *       - bearerAuth: []
  *     summary: Retrieve a list of companies
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     responses:
  *       200:
  *         description: List of companies
@@ -116,7 +85,7 @@
  *     security:
  *       - bearerAuth: []
  *     summary: Retrieve a company by companyId
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     parameters:
  *       - in: query
  *         name: companyId
@@ -136,8 +105,7 @@
  * @swagger
  * /company:
  *   put:
- *     tags:
- *       - Admin
+ *     tags[Admin /api/v1/admin]
  *     summary: Update an existing company
  *     consumes:
  *       - application/json
@@ -174,7 +142,7 @@
  *     security:
  *       - bearerAuth: []
  *     summary: Delete a company
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     parameters:
  *       - in: body
  *         name: companyId
@@ -197,7 +165,7 @@
  *     security:
  *       - bearerAuth: []
  *     summary: Create a new location
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     parameters:
  *       - in: body
  *         name: location
@@ -231,7 +199,7 @@
  *     security:
  *       - bearerAuth: []
  *     summary: Retrieve a list of locations
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     responses:
  *       200:
  *         description: List of locations
@@ -246,7 +214,7 @@
  *     security:
  *       - bearerAuth: []
  *     summary: Retrieve a location by locationId
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     parameters:
  *       - in: query
  *         name: locationId
@@ -269,7 +237,7 @@
  *     security:
  *       - bearerAuth: []
  *     summary: Update a location
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     parameters:
  *       - in: body
  *         name: location
@@ -305,7 +273,7 @@
  *     security:
  *       - bearerAuth: []
  *     summary: Delete a location
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     parameters:
  *       - in: body
  *         name: locationId
@@ -328,7 +296,7 @@
  *     security:
  *       - bearerAuth: []
  *     summary: Create a new sensor
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     parameters:
  *       - in: body
  *         name: sensor
@@ -360,7 +328,7 @@
  *     security:
  *       - bearerAuth: []
  *     summary: Retrieve a list of sensors
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     responses:
  *       200:
  *         description: List of sensors
@@ -375,7 +343,7 @@
  *     security:
  *       - bearerAuth: []
  *     summary: Retrieve a sensor by sensorId
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     parameters:
  *       - in: query
  *         name: sensorId
@@ -398,7 +366,7 @@
  *     security:
  *       - bearerAuth: []
  *     summary: Update a sensor
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     parameters:
  *       - in: body
  *         name: sensor
@@ -434,7 +402,7 @@
  *     security:
  *       - bearerAuth: []
  *     summary: Delete a sensor
- *     tags: [Admin]
+ *     tags: [Admin /api/v1/admin]
  *     parameters:
  *       - in: body
  *         name: sensorId

@@ -1,22 +1,22 @@
 /**
  * @swagger
  * tags:
- *   - name: SensorData
+ *   - name: SensorData /api/v1/sensor
  *     description: Endpoints for sensor data
  */
 
 /**
  * @swagger
- * /sensorData:
+ * /SensorData:
  *   post:
  *     tags:
- *       - SensorData
+ *       - SensorData /api/v1/sensor
  *     summary: Insert sensor data
  *     consumes:
  *       - application/json
  *     parameters:
  *       - in: body
- *         name: sensorData
+ *         name: SensorData /api/v1/sensor
  *         description: Sensor data to be inserted
  *         required: true
  *         schema:
@@ -37,16 +37,16 @@
 
 /**
  * @swagger
- * /sensorData:
+ * /SensorData:
  *   get:
  *     tags:
- *       - SensorData
+ *       - SensorData /api/v1/sensor
  *     summary: Retrieve sensor data
  *     consumes:
  *       - application/json
  *     parameters:
  *       - in: body
- *         name: sensorDataParams
+ *         name: SensorData /api/v1/sensorParams
  *         description: Parameters to filter sensor data
  *         required: true
  *         schema:
