@@ -46,3 +46,5 @@ Hexagonal Architecture is an architectural pattern that helps in maintaining the
 
 1. The application is deployed in production and can be accessed through this URL: [https://t3-snqy.onrender.com/](https://t3-snqy.onrender.com/).
 2. The Swagger documentation for the endpoints in production can be found at [https://t3-snqy.onrender.com/api-docs/](https://t3-snqy.onrender.com/api-docs/).
+![image](https://github.com/f-ulloa/T3/assets/67931071/453d43c4-55ea-4ac5-9727-a37f5d294e23)
+
